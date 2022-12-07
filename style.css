@@ -1,19 +1,33 @@
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
 .container {
   display: flex;
   height: 100vh;
-  width: 100%;
-  justify-content: flex-start;
+  width: 100vh;
 }
 
 .column-container {
+  display: flex;
   height: 100vh;
   width: 100px;
-  margin: 1px;
+  margin: 0 1px;
+  flex-direction: column;
+  flex-grow: 0;
 }
 
-.column-box {
-  background-color: blue;
+.box {
+  flex: content;
+  background-color: rgb(94, 255, 0);
   height: 100px;
-  width: 100px;
-  margin: 1px;
+  margin: 1px 0;
+  flex: auto;
+}
+
+.color-change {
+  background-color: black;
 }/*# sourceMappingURL=style.css.map */

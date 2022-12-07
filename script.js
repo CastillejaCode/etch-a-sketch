@@ -2,19 +2,27 @@
 
 const container = document.querySelector(".container");
 
-const squareGrid = function (x, y) {
+const squareGrid = function (grid) {
 	//Create column
-	for (let i = 1; i <= x; i++) {
+	for (let i = 1; i <= grid; i++) {
 		container.insertAdjacentHTML(
 			"afterbegin",
 			"<div class='column-container'></div>"
 		);
-		for (let i = 1; i <= y; i++) {
+		for (let i = 1; i <= grid; i++) {
 			document
 				.querySelector(".column-container")
-				.insertAdjacentHTML("afterbegin", "<div class='column-box'></div>");
+				.insertAdjacentHTML("afterbegin", "<div class='box'></div>");
 		}
 	}
 };
 
-squareGrid(5, 6);
+squareGrid(50);
+
+const box = document.querySelectorAll(".box");
+
+box.forEach((e) =>
+	e.addEventListener("mouseenter", function (e) {
+		e.target.classList.add("color-change");
+	})
+);
