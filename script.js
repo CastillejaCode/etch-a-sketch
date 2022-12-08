@@ -25,8 +25,10 @@ const squareGrid = function (grid) {
 	);
 };
 
-button.addEventListener("click", function (e) {
-	let answer = Number(prompt(`Grid Size /n X by X squares`));
-	container.textContent = "";
-	squareGrid(answer);
-});
+squareGrid(30);
+
+// button.addEventListener("click", function (e) {
+// 	let answer = Number(prompt(`Grid Size /n X by X squares`));
+// 	container.textContent = "";
+// 	squareGrid(answer);
+// });
