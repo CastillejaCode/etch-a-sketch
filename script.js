@@ -3,10 +3,22 @@
 const container = document.querySelector(".container");
 const button = document.querySelector(".button");
 const buttonClear = document.querySelector(".clear");
+
 const gridInputRange = document.querySelector(".grid-input-range");
 const gridInputNumber = document.querySelector(".grid-input-number");
 const gridInput = document.querySelector(".grid-number");
-const colorPick = document.querySelector(".color-pick");
+
+const colorPickBox = document.querySelector("#color");
+const colorPickBackground = document.querySelector("#color-background");
+const colorChange = document.querySelectorAll(".color-change");
+
+const stylesheet = document.styleSheets[1];
+const containerBackgroundColor = [...stylesheet.cssRules].find(
+	(r) => r.selectorText === ".box"
+);
+const boxBackgroundColor = [...stylesheet.cssRules].find(
+	(r) => r.selectorText === ".color-change"
+);
 
 const squareGrid = function (grid) {
 	//Create column
@@ -63,4 +75,18 @@ gridInput.addEventListener("change", function () {
 gridInput.addEventListener("change", function () {
 	container.textContent = "";
 	squareGrid(gridInputNumber.value);
+});
+
+colorPickBox.addEventListener("input", function () {
+	boxBackgroundColor.style.setProperty(
+		"background-color",
+		`${colorPickBox.value}`
+	);
+});
+
+colorPickBackground.addEventListener("input", function () {
+	containerBackgroundColor.style.setProperty(
+		"background-color",
+		`${colorPickBackground.value}`
+	);
 });

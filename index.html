@@ -18,11 +18,15 @@
         <div class="settings">
             <div class="grid-number">   
                 <input class='grid-input-range' type="range" min="10" max="100" step="10" value='30' oninput="this.nextElementSibling.value =this.value">
-                <input class="grid-input-number" type="number" min="10" max="100" step="10" oninput="this.previousElementSibling.value=this.value"></input>
+                <input class="grid-input-number" type="number" min="10" max="100" step="10" value='30' oninput="this.previousElementSibling.value=this.value"></input>
             </div>
             <div class="color-pick">
-                <label for="color">Pick a color!</label>
+                <label for="color">Pick a  main color!</label>
                 <input type="color" id="color" name="color">
+            </div>
+            <div class="color-pick-background">
+                <label for="color">Pick a background color!</label>
+                <input type="color" id="color-background" name="color">
             </div>
             <div class="rainbow"></div>
             <div class="additive"></div>
