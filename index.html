@@ -14,6 +14,21 @@
         <h1>Etch-a-Sketch</h1>
     </div>
     <div class="container"></div>   
-    <div class="right">Stuff</div>
+    <div class="right">
+        <div class="settings">
+            <div class="grid-number">   
+                <input class='grid-input-range' type="range" min="10" max="100" step="10" value='30' oninput="this.nextElementSibling.value =this.value">
+                <input class="grid-input-number" type="number" min="10" max="100" step="10" oninput="this.previousElementSibling.value=this.value"></input>
+            </div>
+            <div class="color-pick">
+                <label for="color">Pick a color!</label>
+                <input type="color" id="color" name="color">
+            </div>
+            <div class="rainbow"></div>
+            <div class="additive"></div>
+            <button class="clear">Clear!</button>
+            
+        </div>
+    </div>
 </body>
 </html>
