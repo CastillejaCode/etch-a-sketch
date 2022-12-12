@@ -140,9 +140,13 @@ btnAdd.addEventListener("click", function () {
 	if (toggle) {
 		box.forEach((box) => {
 			let i = 0.1;
+
 			box.addEventListener("mouseenter", function (e) {
 				this.style.backgroundColor = `rgb(0,0,0, ${i})`;
 				i += 0.1;
+				buttonClear.addEventListener("click", function () {
+					i = 0.1;
+				});
 			});
 		});
 		toggle = false;
