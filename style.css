@@ -53,4 +53,26 @@ body {
 
 .color-change {
   background-color: black;
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+}
+.settings-container button {
+  cursor: pointer;
+  transition: 1s;
+}
+.settings-container button:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.button-active {
+  background-color: aqua;
+  transform: scale(1.1);
+  transition: 1s;
 }/*# sourceMappingURL=style.css.map */

@@ -118,6 +118,8 @@ let state = true;
 btnRandom.addEventListener("click", function (e) {
 	const box = document.querySelectorAll(".box");
 	if (state) {
+		if (btnAdd.classList.contains("button-active")) return;
+		btnRandom.classList.toggle("button-active");
 		box.forEach((box) =>
 			box.addEventListener("mouseenter", function (e) {
 				this.style.backgroundColor = randomRGB();
@@ -125,6 +127,7 @@ btnRandom.addEventListener("click", function (e) {
 		);
 		state = false;
 	} else {
+		btnRandom.classList.toggle("button-active");
 		box.forEach((e) =>
 			e.addEventListener("mouseenter", function (e) {
 				this.style.backgroundColor = "";
@@ -138,6 +141,8 @@ let toggle = true;
 btnAdd.addEventListener("click", function () {
 	const box = document.querySelectorAll(".box");
 	if (toggle) {
+		if (btnRandom.classList.contains("button-active")) return;
+		btnAdd.classList.toggle("button-active");
 		box.forEach((box) => {
 			let i = 0.1;
 
@@ -151,6 +156,7 @@ btnAdd.addEventListener("click", function () {
 		});
 		toggle = false;
 	} else {
+		btnAdd.classList.toggle("button-active");
 		box.forEach((e) =>
 			e.addEventListener("mouseenter", function (e) {
 				this.style.backgroundColor = "";

@@ -15,7 +15,10 @@
     </div>
     <div class="container"></div>   
     <div class="right">
-        <div class="settings">
+        <div>
+             <h1>Settings</h1>
+        </div>
+        <div class="settings-container">
             <div class="grid-number">   
                 <input class='grid-input-range' type="range" min="10" max="100" step="10" value='30' oninput="this.nextElementSibling.value =this.value">
                 <input class="grid-input-number" type="number" min="10" max="100" step="10" value='30' oninput="this.previousElementSibling.value=this.value"></input>
@@ -28,11 +31,18 @@
                 <label for="color" v>Pick a background color!</label>
                 <input type="color"  value ="#FFFFFF"id="color-background" name="color">
             </div>
-            <button class="color-reset">Reset colors</button>
-            <button class="btn-random">Random Colors!</button>
-            <button class="btn-add">Additive</button>
-            <button class="clear">Clear!</button>
-            
+            <div>
+                <button class="color-reset">Reset colors</button>
+            </div>
+            <div>
+                <button class="btn-random">Random Colors!</button>
+            </div>
+            <div>
+                <button class="btn-add">Additive</button>
+            </div>
+            <div>
+                <button class="clear">Clear!</button>
+            </div>
         </div>
     </div>
 </body>
