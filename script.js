@@ -20,6 +20,8 @@ const boxBackgroundColor = [...stylesheet.cssRules].find(
 	(r) => r.selectorText === ".color-change"
 );
 
+const colorReset = document.querySelector(".color-reset");
+
 const squareGrid = function (grid) {
 	//Create column
 	for (let i = 1; i <= grid; i++) {
@@ -89,4 +91,11 @@ colorPickBackground.addEventListener("input", function () {
 		"background-color",
 		`${colorPickBackground.value}`
 	);
+});
+
+colorReset.addEventListener("click", function () {
+	boxBackgroundColor.style.setProperty("background-color", `black`);
+	containerBackgroundColor.style.setProperty("background-color", `white`);
+	colorPickBox.value = "#000000";
+	colorPickBackground.value = "#FFFFFF";
 });
