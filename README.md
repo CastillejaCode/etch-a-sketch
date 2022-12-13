@@ -10,8 +10,7 @@ Randomize generates a random color for each block colored in
 
 Additive generates transparent blocks that will add over each other, getting darker over time
 
-Clear board to remove any drawings
-    Saves current color choices
+Clear board to remove any drawings, saves current color choices
 
 
 
