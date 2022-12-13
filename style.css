@@ -14,6 +14,11 @@ body {
   width: 100%;
 }
 
+.left {
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .right {
   flex-direction: column;
   justify-content: space-between;
@@ -22,19 +27,13 @@ body {
   text-align: center;
 }
 
-.left {
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.container {
+.sketch-container {
   display: flex;
   align-self: center;
   height: 95vh;
   width: 100vh;
   border: 5px solid black;
   border-radius: 7px;
-  align-items: center;
 }
 
 .column-container {
@@ -62,7 +61,7 @@ body {
   display: flex;
   position: -webkit-sticky;
   position: sticky;
-  top: 26%;
+  top: 25%;
   left: 50%;
   flex-direction: column;
   align-items: center;

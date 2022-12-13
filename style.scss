@@ -14,32 +14,31 @@ body {
     font-size: 26px;
     width:100%;
 }
+
+.left {
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .right {
     flex-direction: column;
     justify-content: space-between;
-    
-    
+
     h1 {
         text-align: center;
     }
-    
 }
-.left {
-    justify-content: center;
-    align-items: flex-start;}
 
-
-.container {
+.sketch-container {
     display: flex;
     align-self: center;
     height: 95vh;
     width: 100vh;
     border: 5px solid black;
     border-radius: 7px;
-    align-items: center;
 }
 
-.column-container{
+.column-container {
     display: flex;
     height: 95vh;
     width: 100px;
@@ -65,14 +64,13 @@ $scale: 1.1;
 .settings-container{
     display: flex;
     position: sticky;
-    top: 26%;
+    top: 25%;
     left:50%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 30px;
-  
-
+    
     hr {
         height: 1px;
         width: 100px;
@@ -91,9 +89,10 @@ $scale: 1.1;
             margin: .15rem;
         }
     }
-    button{
+
+    button {
         cursor: pointer;
-        transition: .1s ease-out    ;
+        transition: .1s ease-out;
         padding: .5rem 1rem;
         font-size: 24px;
         border-radius: 5px;
@@ -127,7 +126,5 @@ $scale: 1.1;
     font-size: 16px;
     list-style: none;
 
-    a {
-        all: unset;
-    }
+    a {  all: unset; }
 }
