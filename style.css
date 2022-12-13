@@ -10,17 +10,20 @@ body {
 
 .left, .right {
   display: flex;
-  justify-content: center;
   font-size: 26px;
   width: 100%;
 }
 
 .right {
-  align-self: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.right h1 {
+  text-align: center;
 }
 
 .left {
-  display: flex;
+  justify-content: center;
   align-items: flex-start;
 }
 
@@ -57,22 +60,53 @@ body {
 
 .settings-container {
   display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 26%;
+  left: 50%;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  font-size: 36px;
+  justify-content: center;
+  font-size: 30px;
+}
+.settings-container hr {
+  height: 1px;
+  width: 100px;
+  background-color: grey;
+  border: none;
+  margin: 1rem;
+  border-radius: 5px;
+}
+.settings-container > * {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.settings-container > * > * {
+  margin: 0.15rem;
 }
 .settings-container button {
   cursor: pointer;
-  transition: 1s;
+  transition: 0.1s ease-out;
+  padding: 0.5rem 1rem;
+  font-size: 24px;
+  border-radius: 5px;
+  border-width: 2px;
 }
 .settings-container button:hover {
   transform: scale(1.1);
-  transition: 0.5s;
 }
 
 .button-active {
-  background-color: aqua;
+  background-color: grey;
   transform: scale(1.1);
-  transition: 1s;
+}
+
+.grid-input-number {
+  text-align: center;
+  width: 45px;
+}
+
+.grid-input-range {
+  accent-color: grey;
 }/*# sourceMappingURL=style.css.map */

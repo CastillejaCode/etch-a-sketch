@@ -11,19 +11,23 @@ body {
 
 .left, .right{
     display: flex;
-    justify-content: center;
-    font-size: 56px;
+    font-size: 26px;
     width:100%;
 }
 .right {
-    align-self: center;
     flex-direction: column;
+    justify-content: space-between;
+    
+    
+    h1 {
+        text-align: center;
+    }
     
 }
 .left {
-    display: flex;
-    align-items: flex-start;
-}
+    justify-content: center;
+    align-items: flex-start;}
+
 
 .container {
     display: flex;
@@ -57,25 +61,62 @@ body {
     background-color: black
 }
 
+$scale: 1.1;
 .settings-container{
-    $scale: 1.1;
     display: flex;
+    position: sticky;
+    top: 26%;
+    left:50%;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    font-size: 36px;
+    justify-content: center;
+    font-size: 30px;
+  
 
+    hr {
+        height: 1px;
+        width: 100px;
+        background-color: grey;
+        border: none;
+        margin: 1rem;
+        border-radius: 5px;
+    }
+
+    > * {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        > * {
+            margin: .15rem;
+        }
+    }
     button{
         cursor: pointer;
-        transition: 1s;
+        transition: .1s ease-out    ;
+        padding: .5rem 1rem;
+        font-size: 24px;
+        border-radius: 5px;
+        border-width: 2px;
     }
 
     button:hover {
         transform: scale($scale);
-        }
+    }
+
 }
 
 .button-active {
-    background-color: aqua;
+    background-color: grey;
     transform: scale($scale);
+}
+
+
+.grid-input-number {
+    text-align: center;
+    width: 45px;
+}
+
+.grid-input-range {
+    accent-color: grey;
 }

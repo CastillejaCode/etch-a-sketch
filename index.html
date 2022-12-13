@@ -15,35 +15,41 @@
     </div>
     <div class="container"></div>   
     <div class="right">
-        <div>
-             <h1>Settings</h1>
-        </div>
+        <h1>Settings</h1>
         <div class="settings-container">
             <div class="grid-number">   
-                <input class='grid-input-range' type="range" min="10" max="100" step="10" value='30' oninput="this.nextElementSibling.value =this.value">
+                <div>grid size</div>
+                <input class='grid-input-range' name ='grid' type="range" min="10" max="100" step="10" value='30' oninput="this.nextElementSibling.value =this.value">
                 <input class="grid-input-number" type="number" min="10" max="100" step="10" value='30' oninput="this.previousElementSibling.value=this.value"></input>
             </div>
-            <div class="color-pick">
-                <label for="color">Pick a  main color!</label>
-                <input type="color" value="#000000" id="color" name="color">
+            <hr/>
+            <div class="color-pick-container">
+                <div class="color-pick">
+                    <label for="color">marker</label>
+                    <input type="color" value="#000000" id="color" name="color">
+                </div>
+                <div class="color-pick-background">
+                    <label for="color">background</label>
+                    <input type="color"  value ="#FFFFFF"id="color-background" name="color">
+                </div>
+                <div>
+                    <button class="color-reset">reset colors</button>
+                </div>
             </div>
-            <div class="color-pick-background">
-                <label for="color" v>Pick a background color!</label>
-                <input type="color"  value ="#FFFFFF"id="color-background" name="color">
+            <hr/>
+            <div class="function-container">
+                <div>
+                    <button class="btn-random">randomize</button>
+                </div>
+                <div>
+                    <button class="btn-add">additive</button>
+                </div>
             </div>
+            <hr/>
             <div>
-                <button class="color-reset">Reset colors</button>
-            </div>
-            <div>
-                <button class="btn-random">Random Colors!</button>
-            </div>
-            <div>
-                <button class="btn-add">Additive</button>
-            </div>
-            <div>
-                <button class="clear">Clear!</button>
+                <button class="clear">clear board</button>
             </div>
         </div>
-    </div>
+        <div>
 </body>
 </html>
