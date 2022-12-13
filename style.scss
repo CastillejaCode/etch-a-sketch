@@ -120,3 +120,14 @@ $scale: 1.1;
 .grid-input-range {
     accent-color: grey;
 }
+
+.footer {
+    text-align: end;
+    padding: 5px;
+    font-size: 16px;
+    list-style: none;
+
+    a {
+        all: unset;
+    }
+}
